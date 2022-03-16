@@ -14,7 +14,6 @@ export const List = ({
 }) => {
   const dollarUSLocale = Intl.NumberFormat("es-CO");
   const selectedProduct: any = useContext(ProductContext);
-  console.log(products)
   const productList = categoryFilter.length
     ? products.filter(({ category }) => category === categoryFilter)
     : products;
