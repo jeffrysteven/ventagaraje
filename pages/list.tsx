@@ -5,9 +5,9 @@ import { useContext } from "react";
 import { Product } from "../types";
 import { ProductContext } from "./_app";
 
-export const List = ({
-  products,
-  categoryFilter,
+const List = ({
+  products = [],
+  categoryFilter = '',
 }: {
   products: Product[];
   categoryFilter: string;
@@ -21,7 +21,7 @@ export const List = ({
     <div className="max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8">
       <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {productList.map((product) => {
-          const { id, name, description, photo, price, sold } = product;
+          const { id, name, description, photo, price = 0, sold } = product;
           return (
             <Link href={!sold ? `/product/${id}` : "#"} key={id}>
               <a
@@ -67,3 +67,5 @@ export const List = ({
     <p className="text-center">No hay productos</p>
   );
 };
+
+export default List;

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Header } from "./header";
-import { List } from "./list";
+import Header from "./header";
+import List from "./list";
 import db from "../utils/db";
 
 const Home = ({ productsData }: any) => {

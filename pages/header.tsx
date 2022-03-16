@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-export const Header = ({ name }: any) => (
+const Header = ({ name }: any) => (
   <div className="text-center">
     <Head>
       <title>Venta de garaje {name && `- ${name}`}</title>
@@ -25,3 +25,5 @@ export const Header = ({ name }: any) => (
     </p>
   </div>
 );
+
+export default Header;

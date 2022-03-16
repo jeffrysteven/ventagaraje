@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Header } from "../header";
-import { Footer } from "../footer";
+import Header from "../header";
+import Footer from "../footer";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ProductContext } from "../_app";
